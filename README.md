@@ -36,7 +36,7 @@ The model.py file contains the code for training and saving the convolution neur
 
 ####1. Model arcthiecture
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 
+My model consists of 5 convolution neural network with various filter sizes and depths.
 
 The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
 
@@ -73,4 +73,5 @@ To combat the overfitting, I added 5 dropout layers and tested on the proportion
 The final step was to run the simulator to see how well the car was driving around track one. Initially, I stayed my car in the very center of the road and I was very happy about how nice a game driver I am. But there were a few spots where the vehicle fell off the track when I use my model to drive it. To improve the driving behavior in these cases, I re-simulate the data with more scenarios that car goes back to the road from the edges of the road.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+
 
