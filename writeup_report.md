@@ -36,7 +36,7 @@ The model.py file contains the code for training and saving the convolution neur
 
 ####1. Model arcthiecture
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 
+My model consists of 5 convolution neural network with various filter sizes and depths.
 
 The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
 
