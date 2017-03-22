@@ -13,10 +13,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/EDA1.png "Model Visualization"
-[image2]: ./examples/EDA2.png "Grayscaling"
-[image3]: ./examples/EDA3.png "Recovery Image"
-[image4]: ./examples/EDA4.png "Recovery Image"
+[image1]: ./examples/EDA1.PNG "Model Visualization"
+[image2]: ./examples/EDA2.PNG "Grayscaling"
+[image3]: ./examples/EDA3.PNG "Recovery Image"
+[image4]: ./examples/EDA4.PNG "Recovery Image"
 
 
 ## Overviews of the Project
