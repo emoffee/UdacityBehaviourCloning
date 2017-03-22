@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 * writeup_report.md or writeup_report.pdf summarizing the results
 
 #### 2. Drive the car in the simulator with trained model
-```sh
+```
 python drive.py model.h5
 ```
 
@@ -61,7 +61,7 @@ The model used an adam optimizer with learning rate 0.001(determined by manual t
 
 #### 4. Training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road.
 
 For details about how I created the training data, see the next section. 
 
@@ -84,29 +84,22 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture consisted of a convolution neural network with the following layers and layer sizes illustrated in the following table:
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+![alt text][image4]
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded the first lap on track one using center lane driving. Here is 20 random sample images of center lane driving:
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back on the center of the road. 
 
 ![alt text][image3]
-![alt text][image4]
+![alt text][image1]
 
-Then I repeated this process on track two in order to get more data points.
+After the collection process, I had 3528 data points. I finally randomly shuffled the data set and put 10% of the data(353) into a validation set. 
 
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 100. I used an adam optimizer so that manually training the learning rate wasn't necessary.
