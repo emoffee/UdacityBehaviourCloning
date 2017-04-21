@@ -24,28 +24,28 @@
 
 ---
 
-####1. Project Files:
+#### 1. Project Files:
 * model.py containing the script to create and train the model
 * model.ipynb is the notebook of running the training model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md or writeup_report.pdf summarizing the results
 
-####2. Drive the car in the simulator with trained model
+#### 2. Drive the car in the simulator with trained model
 ```sh
 python drive.py model.h5
 ```
 
-####3. Training the model
+#### 3. Training the model
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 
 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to develop very deep layers combo and trial-error tuned parameters. I learnt a lesson from project 2 that too shallow of a cnn might not be able to achieve a nice test accuracy and, to batch trial-and-error tuning parameters are needed, no matter how experienced I am at mastering this art.
 
@@ -59,7 +59,7 @@ The final step was to run the simulator to see how well the car was driving arou
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####1.1 Training data
+#### 1.1 Training data
 
 To capture good behaviour of driving, training data was chosen to keep the vehicle driving on the road, as well as several recovery from the lanes. I used a combination of center lane driving, recovering from the left and right sides of the road. A simple comprehensive analysis for the center lane driving was made to check if the data met a minimum requirements:
 
@@ -85,7 +85,7 @@ Although for the majority of time my car is driving in the center, but the logco
 
 ![alt text][ri]
 
-####1.2 Model arcthiecture
+#### 1.2 Model arcthiecture
 
 My model consists of 5 convolution neural network with various filter sizes and depths. The model also includes ELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
 
@@ -93,7 +93,7 @@ The final model architecture is indicated as the following:
 
 ![alt text][ARC]
 
-####1.3 Overfitting in the model
+#### 1.3 Overfitting in the model
 
 The model contains 5 dropout layers in order to reduce overfitting. All of them are deployed after the transoformations of cnn layers.
 
@@ -103,7 +103,7 @@ The model has been tested by running it through the simulator more than 10 times
 
 Also, data set randomly shuffled the 10% of the data into a validation set to determine if the model was over or under fitting.
 
-####1.4 Model parameter tuning
+#### 1.4 Model parameter tuning
 
 The model used an adam optimizer with learning rate 0.001 (determined by manual tunning after more than 50 experiments), so the learning rate was not tuned manually.
 
